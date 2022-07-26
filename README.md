@@ -55,5 +55,6 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts July 29, 2022 20:00 UTC
 - Ends August 3, 2022 20:00 UTC
+- ⚛Cosmos Leagues
 
 [ ⭐️ SPONSORS ADD INFO HERE ]

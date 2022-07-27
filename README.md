@@ -65,7 +65,7 @@ that process messages generated from the Axelar network (such as minting a certa
 and accept messages/token deposits from users/applications.
 - Axelar's deposit service contract for user deposit and recipient processing.
 - Axelar's XC20 token wrapper contracts to allow tokens deployed by Axelar to be interoperable on Polkadot via Moonbeam.
-- Axelar utilities
+- Axelar's gas service to pay for relaying of remote contract calls
 
 # Protocol overview
 
@@ -138,15 +138,25 @@ Note: Known issues posted on GitHub aren't considered valid findings: https://gi
 
 ### Interfaces
 
-#### IAxelarGateway.sol (122 sloc)
+#### IAxelarGateway.sol (128 sloc)
+
+#### IAxelarAuth.sol (6 sloc) (in scope)
 
 #### IAxelarAuthWeighted.sol (13 sloc) (in scope)
 
+#### IAxelarDepositService.sol (63 sloc) (in scope)
+
+#### IAxelarGasService.sol (100 sloc) (in scope)
+
+#### IUpgradable.sol (20 sloc)
+
 #### IERC20.sol (15 sloc)
+
+#### IERC20Burn.sol (4 sloc)
 
 #### IERC20BurnFrom.sol (4 sloc)
 
-#### IAxelarExecutable.sol (56 sloc)
+#### IAxelarExecutable.sol (44 sloc)
 
 This interface needs to be implemented by the application contract
 to receive cross-chain messages. See the
@@ -179,10 +189,53 @@ The deposit service contract that allows a user to send their token to a deposit
 which can be forwarded to the Axelar gateway for a cross-chain transfer.
 It also wraps native token, such as ETH, to an ERC-20 token, WETH, as the Axelar Gateway only supports ERC-20 tokens.
 
+#### AxelarDepositServiceProxy.sol (8 sloc) (in scope)
+
+Proxy contract for the deposit service.
+
+#### DepositReceiver.sol (17 sloc) (in scope)
+
+This contract is deployed by the deposit service to act as the recipient address for the cross-chain transfer.
+When tokens arrive here, it calls the `ReceiverImplementation.sol` method to forward the tokens to the user, auto-unwrapping if necessary.
+
 #### ReceiverImplementation.sol (91 sloc) (in scope)
 
 The receiver contract that accepts tokens and forwards them to the user address.
 It also unwraps wrapped native tokens like WETH, so the user gets the native token instead.
+
+#### AxelarGasService.sol (146 sloc) (in scope)
+
+This contract accepts gas payments from applications who wish to use Axelar's microservices
+that relay the contract calls made by the application using the Axelar gateway.
+Gas payment should be made in the same tx as the `callContract` on the Axelar gateway for the
+microservices to consider it. The gas service allows refunds for any excessive gas payments
+after the remote contract has been called with the payload.
+
+#### AxelarGasServiceProxy.sol (8 sloc) (in scope)
+
+Proxy contract for the gas service.
+
+#### XC20Wrapper.sol (108 sloc) (in scope)
+
+This contract is present in the `xc20` subfolder.
+
+Moonbeam, an EVM compatible chain in the Polkadot ecosystem, supports ERC20-compatible tokens called [XC20](https://moonbeam.network/blog/introducing-xc-20s-the-new-standard-for-cross-chain-tokens-on-dotsama/).
+These function like normal ERC20s but can also be sent to the rest of Polkadot through special non-EVM transactions on Moonbeam.
+You can get new XC20s that an owner address is allowed to mint and burn through the Moonbeam consensus,
+and Moonbeam has agreed to provide some to bridge Axelar Tokens to the rest of Polkadot.
+
+The `XC20Wrapper.sol` is a contract that will be deployed on Moonbeam and can wrap Axelar Tokens into XC20s that are set as wrapped versions of those tokens.
+First, for new XC20s we need to tell the XC20Wrapper what they wrap as well as set up their name and symbol.
+Afterwards they can be wrapped and unwrapped freely by anyone, even remotely.
+`XC20Sample.sol` is a sample XC20 token for reference used in tests.
+
+#### Proxy.sol (62 sloc)
+
+Inheritable proxy contract
+
+#### Upgradable.sol (48 sloc)
+
+Inheritable upgradable implementation contract
 
 #### AdminMultisigBase.sol (134 sloc)
 
@@ -243,7 +296,7 @@ We'd like wardens to particularly focus on the following:
 
 1. Authentication of gateway commands: `execute` and `transferOperatorship` in `AxelarGateway.sol` which calls `validateProof` on the `AxelarAuthWeighted.sol`.
 2. Deposit service send/receive and correct wrapping/unwrapping of native gas tokens.
-3. XC20 comptaibility and 1-to-1 wrapping of Axelar ERC-20 tokens. 
+3. XC20 comptaibility and 1-to-1 wrapping of Axelar ERC-20 tokens.
 
 # Build
 

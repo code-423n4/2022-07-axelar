@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Moonbeam",
+    "chainId": 1287,
+    "gateway": "0x5769D84DD62a6fD969856c75c7D321b84d455929",
+    "rpc": "https://moonbeam-alpha.api.onfinality.io/public",
+    "gasReceiver": "0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6",
+    "constAddressDeployer": "0x617179a15fEAa53Fa82ae80b0fc3E85b7359a748",
+    "tokenName": "DEV",
+    "tokenSymbol": "DEV",
+    "xc20Wrapper": "0x7a852C4F4ecc07164365B0def5F37b44B085C558",
+    "xc20Samples": [
+      "0xffFfFffeFd9d0bf45a2947A519a741c4b9E99EB6",
+      "0xFfFFfffEF0608962D5801B39f437d4cc416939e1"
+    ]
+  },
+  {
+    "name": "Avalanche",
+    "chainId": 43113,
+    "rpc": "https://api.avax-test.network/ext/bc/C/rpc",
+    "gateway": "0xC249632c2D40b9001FE907806902f63038B737Ab",
+    "gasReceiver": "0xbE406F0189A0B4cf3A05C286473D23791Dd44Cc6",
+    "constAddressDeployer": "0x617179a15fEAa53Fa82ae80b0fc3E85b7359a748",
+    "tokenName": "Avax",
+    "tokenSymbol": "AVAX"
+  }
+]

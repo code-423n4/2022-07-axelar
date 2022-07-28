@@ -401,8 +401,6 @@ Multisig module of the Axelar network that signs commands for the gateway via th
 
 ## Scoping details answers
 
-Not present in `README.md`:
-
 ```md
 ### Do you have a link to the repo that the contest will cover?
 [https://github.com/axelarnetwork/axelar-cgp-solidity

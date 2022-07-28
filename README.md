@@ -160,6 +160,44 @@ See this [example](https://github.com/axelarnetwork/axelar-local-gmp-examples/tr
 The following contracts are in-scope for the audit.
 The remaining code in the repo is only relevant for tests, utils, samples etc., and not in scope.
 
+## Files in Scope
+
+Here's the list of in-scope files. Summaries are provided in the following section.
+
+**Emoji legend:**
+
+| Emoji | Meaning |
+|---|---|
+|🔍|Interfaces|
+|🎨|Abstract|
+|📝|Contracts|
+|💰|Payable|
+|🧮|Uses Hash Functions|
+|🖥 | Uses Assembly|
+|👥|DelegateCall|
+|♻️ |TryCatch|
+|📤 |Transfers ETH|
+|💣 |Has Destroyable Contracts|
+
+| Type     | File                                                    | Logic Contracts | Interfaces | Lines | nLines | nSLOC | Comment Lines | Complex. Score | Capabilities   |
+| -------- | ------------------------------------------------------------------ | --------------- | ---------- | ----- | ------ | ----- | ------------- | -------------- | -------------- |
+| 🔍       | [IAxelarAuth](contracts/interfaces/IAxelarAuth.sol)              |                 | 1          | 11    | 8      | 4     | 1             | 7              |                |
+| 🔍       | [IAxelarAuthWeighted](contracts/interfaces/IAxelarAuthWeighted.sol) |                 | 1          | 21    | 16     | 10    | 1             | 9              |                |
+| 🔍       | [IAxelarDepositService](contracts/interfaces/IAxelarDepositService.sol)   |                 | 1          | 77    | 10     | 5     | 2             | 28             | 💰             |
+| 🔍       | [IDepositBase](contracts/interfaces/IDepositBase.sol)               |                 | 1          |    |      |     |              |              | 💰             |
+| 🔍       | [IAxelarGasService](contracts/interfaces/IAxelarGasService.sol)     |                 | 1          | 124   | 60     | 47    | 6             | 28             | 💰             |
+| 📝       | [AxelarAuthWeighted](contracts/auth/AxelarAuthWeighted.sol)        | 1               |            | 124   | 118    | 74    | 19            | 66             | 🧮             |
+| 📝       | [AxelarGateway](contracts/AxelarGateway.sol) (partly in scope)     | 1               |            | 658   | 568    | 389   | 50            | 386            | 👥🧮♻️         |
+| 📝       | [DepositReceiver](contracts/deposit-service/DepositReceiver.sol)           | 1               |            | 30    | 30     | 17    | 7             | 30             | 🖥💰💣👥       |
+| 📝       | [DepositBase](contracts/deposit-service/DepositBase.sol)           | 1               |            |    |     |     |             |             | 🖥💰           |
+| 📝       | [AxelarDepositService](contracts/deposit-service/AxelarDepositService.sol)      | 1               |            | 243   | 195    | 142   | 28            | 161            | 💰🧮           |
+| 📝       | [ReceiverImplementation](contracts/deposit-service/ReceiverImplementation.sol)    | 1               |            |    |     |     |             |             | 🖥📤           |
+| 📝       | [AxelarDepositServiceProxy](contracts/deposit-service/AxelarDepositServiceProxy.sol) | 1               |            | 14    | 14     | 8     | 2             | 9              | 💰🧮           |
+| 📝       | [XC20Wrapper](xc20/contracts/XC20Wrapper.sol)                          | 1               |            |     |      |      |              |               |              |
+| 📝       | [AxelarGasService](contracts/gas-service/AxelarGasService.sol)              | 1               |            | 183   | 129    | 95    | 8             | 96             | 💰📤🧮         |
+| 📝       | [AxelarGasServiceProxy](contracts/gas-service/AxelarGasServiceProxy.sol)         | 1               |            | 12    | 12     | 8     | 1             | 4              | 🧮             |
+| 📝🔍🎨    | Totals                                                  | 10              | 5          |   |    |    |            |             | 🖥💰💣📤👥🧮♻️ |
+
 ### Interfaces
 
 #### IAxelarGateway.sol (128 sloc)

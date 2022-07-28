@@ -374,7 +374,7 @@ Network resources: https://docs.axelar.dev/resources
 
 Token transfer app: https://satellite.money/
 
-General Message Passing Usage: https://docs.axelar.dev/dev/gmp
+General Message Passing Usage: https://docs.axelar.dev/dev/gmp-overview
 
 Example token transfer flow: https://docs.axelar.dev/learn/cli/axl-to-evm
 

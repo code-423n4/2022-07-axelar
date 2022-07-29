@@ -78,7 +78,7 @@ node scripts/addLocalXc20.js local
 node scripts/addWrapping local aUSDC
 ```
 
-See [test.js](xc20/test/test.js) for more in-depth tests.
+See [test.js](https://github.com/code-423n4/2022-07-axelar/blob/main/xc20/test/test.js) for more in-depth tests.
 
 ## Design Notes
 
@@ -222,7 +222,7 @@ This is used to wrap/unwrap native gas token.
 
 This interface needs to be implemented by the application contract
 to receive cross-chain messages. See the
-[token swapper example](contracts/test/gmp/DestinationChainSwapExecutable.sol) for an example.
+[token swapper example](https://github.com/code-423n4/2022-07-axelar/tree/main/contracts/test/gmp/DestinationChainSwapExecutable.sol) for an example.
 
 #### IOwnable.sol (8 sloc)
 

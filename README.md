@@ -222,7 +222,7 @@ This is used to wrap/unwrap native gas token.
 
 This interface needs to be implemented by the application contract
 to receive cross-chain messages. See the
-[token swapper example](https://github.com/code-423n4/2022-07-axelar/tree/main/contracts/test/gmp/DestinationChainSwapExecutable.sol) for an example.
+[token swapper example](https://github.com/code-423n4/2022-07-axelar/blob/main/contracts/test/gmp/DestinationChainSwapExecutable.sol) for an example.
 
 #### IOwnable.sol (8 sloc)
 

@@ -1,0 +1,565 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q3-2022 / ⚛axelar-network-jul29
+==============================================================
+
+[04/05/2022 2:53 PM] kartoonjoy
+👋 Hello and welcome to the contest channel for the **$50K USDC Axelar Network** contest!
+
+📆 Contest opens April 07, 2022, at 0:00 UTC and runs through April 11, 2022 at 23:59 UTC (5 days).
+
+Please give a warm welcome to the Axelar Network team, particularly @Milap | Axelar and @Michael De Luca who will be available for questions either here in the channel or via DM. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+{Reactions}
+axelar (3) C4Keycap (5) 
+
+[04/05/2022 4:27 PM] entangled_qubit
+👋 Looking forward to all the things you find!
+
+
+[04/06/2022 10:55 PM] entangled_qubit
+Hey Wardens, just want to mention that we'll have a detailed design doc for our contracts prepared over the next few hours to make it easier to understand.
+
+{Reactions}
+hi5 (8) 
+
+[04/07/2022 1:38 AM] entangled_qubit
+Example flows mentioned here should be useful to get an overview of the how the interoperability mechanism works: https://github.com/code-423n4/2022-04-axelar#example-flows
+
+{Embed}
+https://github.com/code-423n4/2022-04-axelar
+GitHub - code-423n4/2022-04-axelar
+Contribute to code-423n4/2022-04-axelar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/446c5ce4-6c24-4054-bbe2-5942bb19c4bc-ECD6E
+
+
+[04/10/2022 12:46 PM] PeakSmile#7305
+Hi is it ready? And if so , where can I find it?
+
+
+[04/10/2022 6:43 PM] abhinavmir#1898
+Hi Axelar team. I'm wondering if you have test coverage and gas reporter enabled, but just not in this gH repo? Or is it something you're still considering?
+
+@Milap | Axelar
+
+
+[04/10/2022 9:00 PM] entangled_qubit
+Hey, I added a bunch of info to the repo itself, I particularly recommend looking at the example flows: https://github.com/code-423n4/2022-04-axelar
+The network design on the Cosmos side is not well documented yet, but for the purposes of the gateway contracts it shouldn't be too relevant if you understand the flow above. Our main Cosmos module that's responsible for preparing the signed commands to the gateway is located here:  https://github.com/axelarnetwork/axelar-core/blob/main/x/evm/keeper/msg_server.go
+
+Let me know if you have any questions!
+
+{Embed}
+https://github.com/code-423n4/2022-04-axelar
+GitHub - code-423n4/2022-04-axelar
+Contribute to code-423n4/2022-04-axelar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/446c5ce4-6c24-4054-bbe2-5942bb19c4bc-ECD6E
+
+{Embed}
+https://github.com/axelarnetwork/axelar-core/blob/main/x/evm/keeper/msg_server.go
+axelar-core/msg_server.go at main · axelarnetwork/axelar-core
+Axelar : A Decentralized Blockchain Interoperability Network - axelar-core/msg_server.go at main · axelarnetwork/axelar-core
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/axelar-core-12A2B
+
+{Reactions}
+chefskiss 
+
+[04/10/2022 9:02 PM] entangled_qubit
+Hey, I think we had some local scripts for it, but nothing integrated in the repo to quickly check gas costs/coverage yet
+
+
+[04/10/2022 9:02 PM] entangled_qubit
+Happy to take questions regarding gas costs etc.
+
+
+[04/12/2022 12:02 AM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The Axelar Network contest is now closed! Huge thanks to everyone who participated🔍, whether you submitted a finding or not.
+
+What's next: Axelar's team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a contest administrator if you have questions along the way!
+
+{Reactions}
+👍 
+
+[07/27/2022 5:18 PM] kartoonjoy
+👋 Hello and welcome to the contest channel for the $50K USDC **Axelar v2** contest!
+
+📆 Contest opens 07/29/2022 8:00 PM (20:00 UTC) and runs through 08/03/2022 8:00 PM (20:00 UTC) (5 days).
+
+Please give a warm welcome to the Axelar team, particularly @Milap | Axelar, @fish.sammy.liu, @Kiryl, and @Michael De Luca, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-07-axelar-network-v2-contest
+
+📢  ⚡Ethereum and ⚛ Cosmos Leagues
+
+{Embed}
+https://code4rena.com/contests/2022-07-axelar-network-v2-contest
+Code4rena Axelar Network v2 contest
+$50,000 USDC
+29 July 2022—3 August 2022
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+👋 (15) 🔥 (9) C4Keycap (7) 
+
+[07/27/2022 5:57 PM] Franfran#5067
+Hey frens hm
+
+{Reactions}
+🔆 (10) 
+
+[07/28/2022 7:58 AM] xiaoming90
+I notice that there is already a contest a few months ago in April. May I know if this contest is a follow-up audit of the previous contest or a new audit for the new version of Axelar network? Thanks!
+
+
+[07/28/2022 11:47 AM] rotcivegaf
+https://code4rena.com/contests/2022-04-axelar-network-contest
+
+{Embed}
+https://code4rena.com/contests/2022-04-axelar-network-contest
+Code4rena Axelar Network contest
+$50,000 USDC
+7 April 2022—11 April 2022
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/446c5ce4-6c24-4054-bbe2-5942bb19c4bc-ECD6E
+
+
+[07/28/2022 3:07 PM] Junnon#3182
+hm
+
+
+[07/28/2022 3:10 PM] entangled_qubit
+Hey, this audit will cover some crucial changes to the main protocol, but otherwise focus on various application/service contracts that sit on top of the protocol. The scope will clarify this further.
+
+{Reactions}
+👍 
+
+[07/28/2022 3:35 PM] xiaoming90
+I see. Thanks for your clarification!
+
+
+[07/29/2022 8:12 PM] entangled_qubit
+Hey everyone, I'll be around to help answer any questions you might have during the contest. Feel free to DM me.
+Contest: https://code4rena.com/contests/2022-07-axelar-network-v2-contest
+
+{Embed}
+https://code4rena.com/contests/2022-07-axelar-network-v2-contest
+Code4rena Axelar Network v2 contest
+$50,000 USDC
+29 July 2022—3 August 2022
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/c4c76176-fbba-4fb7-b5a6-1b82b0cec7ae-EBE21
+
+{Reactions}
+nice (4) 
+
+[07/30/2022 2:07 AM] __141345__
+Have some trouble to run the test suit in windows, anyone did in win?
+npm ERR! Cannot read properties of null (reading 'pickAlgorithm')
+
+
+[07/30/2022 2:20 AM] entangled_qubit
+Clear your npm cache perhaps,
+https://stackoverflow.com/questions/69567381/getting-cannot-read-property-pickalgorithm-of-null-error-in-react-native
+
+
+[07/30/2022 2:26 AM] ak19966
+May I know the time zone of sponsors.. I can plan accordingly my schedule for queries
+
+
+[07/30/2022 3:35 AM] __141345__
+I also found this stackoverflow page, unfortunately npm cache clear --force does not work for me...
+
+
+[07/30/2022 4:22 AM] ak19966
+anyone know the time zone of sponsors ?
+
+
+[07/30/2022 4:57 AM] devabdee
+Another Hardhat Project 🙂
+
+
+[07/30/2022 6:18 AM] tofunmi
+Is the docs updated for the current upgrade @Milap | Axelar , x20 is missing
+
+
+[07/30/2022 10:15 AM] entangled_qubit
+6 am to 8 pm ET is when I'm most available
+
+{Reactions}
+👍 (2) 
+
+[07/30/2022 10:16 AM] entangled_qubit
+Hmm, not sure then. Might be easiest to use an Ubuntu VM
+
+
+[07/30/2022 10:16 AM] entangled_qubit
+Which docs are you talking about?
+
+
+[07/30/2022 3:05 PM] tofunmi
+Axelar docs , I already got what I needed
+
+{Reactions}
+👍 
+
+[08/01/2022 4:28 AM] elku.cryptos
+is it correct to say that the gas optimizations mentioned in this report are not counted for this audit?
+https://code4rena.com/reports/2022-04-axelar
+
+
+[08/01/2022 8:27 AM] 100proof
+Anyone here worked out how voting is supposed to work?
+
+
+[08/01/2022 8:28 AM] 100proof
+I'm not getting timely responses from the sponsor
+
+
+[08/01/2022 8:28 AM] ak19966
+Here in axelar or golom ?
+
+
+[08/01/2022 8:28 AM] jayphbee
+axelar
+
+
+[08/01/2022 8:28 AM] ak19966
+I see
+
+
+[08/01/2022 8:30 AM] jayphbee
+I found i couldn't understand the business logic of axelar
+
+
+[08/01/2022 8:39 AM] ak19966
+I think . The docs are clear...
+
+
+[08/01/2022 9:31 AM] 100proof
+Oops, wrong channel. Definitely meant this for golom
+
+
+[08/01/2022 9:40 AM] ak19966
+I understand.
+
+
+[08/01/2022 4:18 PM] entangled_qubit
+You're welcome to report similar optimizations/issues if they occur in different places. We just prefer to not get the exact same report (same issue in the same function/logic) from the last contest (since we might not have fixed a report we considered not applicable or a lower priority issue).
+
+
+[08/01/2022 4:18 PM] entangled_qubit
+Happy to expand on any part of our contracts/logic that's not clear.
+
+
+[08/01/2022 11:15 PM] minh___
+not quite the right channel but found it interesting and its somehow related: https://twitter.com/0xfoobar/status/1554234268884389888
+
+{Embed}
+foobar (@0xfoobar)
+https://twitter.com/0xfoobar/status/1554234268884389888
+Nomad bridge getting actively hacked. WETH and WBTC being taken out in million-dollar increments. Withdraw all funds if you can, still $126m remaining in the contract that's likely at risk
+Likes
+643
+Retweets
+317
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/FZG_mowXwAEhspf-2E6B9.jpg
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/FZG_ol1XEAAzASQ-ED7C5.jpg
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/FZG_pcUXEAAZnTS-76FAD.jpg
+Twitter
+
+{Reactions}
+👍 
+
+[08/01/2022 11:16 PM] minh___
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/unknown-6E98B.png
+
+
+[08/01/2022 11:27 PM] Franfran#5067
+Word
+
+
+[08/02/2022 10:03 PM] cryptphi
+@Milap | Axelar  would contract deployer be an EOA? Trying to figure out who deploys the gas service contract
+
+
+[08/02/2022 11:53 PM] entangled_qubit
+Contract deployer can also be a multisig wallet. Gas service will be deployed by the relayer+executor service that's executing the remote contract call. Axelar provides this service, but there can be other providers.
+
+
+[08/03/2022 12:54 AM] 100proof
+@Milap | Axelar In the docs it says `AxelarGateway` is partly in scope. What does this mean? Does it mean some functions are in-scope and others aren't?
+
+{Reactions}
+👇 (2) 
+
+[08/03/2022 12:56 AM] dravee
+AxelarGateway.sol (479 sloc) (partly in scope)
+[...]
+Note: The part of this contract that is in scope is the execute method and transferOperatorship (i.e interactions with the auth contract, ignore the other commands).
+
+
+[08/03/2022 1:03 AM] entangled_qubit
+Yep, what's mentioned above:
+https://github.com/code-423n4/2022-07-axelar#axelargatewaysol-479-sloc-partly-in-scope
+
+
+[08/03/2022 1:04 AM] 100proof
+My mistake. All the info is there. I just didn't read down far enough.
+
+
+[08/03/2022 1:04 AM] entangled_qubit
+No worries!
+
+
+[08/03/2022 1:09 AM] entangled_qubit
+@wardens Based on couple of questions I have received, I'd like to clarify one assumption we are making for the contracts (which is enforced at the axelar proof of stake network):
+Operators correspond to validators on the Axelar network. However, the operator address for a given epoch is derived from the validator key along with a nonce that is unique for each operator epoch and chain.
+i.e Whenever operatorship is being transferred, an honest validator will always generate a new operator address (and not reuse their old one) due to a nonce.
+
+
+[08/03/2022 7:13 AM] cryptphi
+ouch, this invalidates one of my submission then 😭
+
+{Reactions}
+😢 (2) 
+
+[08/03/2022 8:49 AM] ruhum
+@Milap | Axelar could you send me a friend request? Want to DM you
+
+
+[08/03/2022 11:54 AM] benbaessler
+Maybe I'm misunderstanding the logic of `AxelarDepositService.sol`, but shouldn't the `refund` functions send tokens back to the `refundAddress`? I don't see any transfers happening inside of the functions... https://github.com/code-423n4/2022-07-axelar/blob/main/contracts/deposit-service/AxelarDepositService.sol#L106-L135 @Milap | Axelar
+
+{Embed}
+https://github.com/code-423n4/2022-07-axelar/blob/main/contracts/deposit-service/AxelarDepositService.sol
+2022-07-axelar/AxelarDepositService.sol at main · code-423n4/2022-0...
+Contribute to code-423n4/2022-07-axelar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/c4c76176-fbba-4fb7-b5a6-1b82b0cec7ae-EBE21
+
+
+[08/03/2022 12:21 PM] minh___
+the refund is happening inside ReceiverImplementation.sol
+
+
+[08/03/2022 12:22 PM] minh___
+which is being used in the DepositReceiver, of which an instance is created in the method you linked
+
+
+[08/03/2022 1:25 PM] benbaessler
+thanks @minhtrng I haven't read ReceiverImplementation.sol yet, I get it now 🙂
+
+
+[08/03/2022 1:26 PM] benbaessler
+Why does the XC20Wrapper transfer the contract balance to the sender in `addWrapping()`? https://github.com/code-423n4/2022-07-axelar/blob/main/xc20/contracts/XC20Wrapper.sol#L63
+
+
+[08/03/2022 5:06 PM] entangled_qubit
+Done
+
+{Reactions}
+thankyou 
+
+[08/03/2022 8:02 PM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Axelar v2** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: the **Axelar** team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+
+[08/03/2022 8:24 PM] .dark_meta
+This is an immense hack because of the way it was replicated so easily by so many after the initial attack. Even worse was that the merkle tree root vuln was published following a security audit and Nomad's response was that it wasn't relevant. Another bridge yesterday, another hot wallet today (yes, I'm looking at you Phantom). Security is not a dirty word....
+
+{Reactions}
+👍 (2) 
+
+[08/03/2022 9:03 PM] entangled_qubit
+Thanks everyone! Very much appreciate your effort in making our protocol more secure!
+
+{Reactions}
+chefskiss (9) praisethesun (3) 
+
+[08/06/2022 9:36 PM] 0xsmartcontract
+thanks a lot,   it was very  pleasant audit 👏🏻
+
+{Reactions}
+❤️ (2) 
+
+[09/02/2022 8:02 AM] codingnamekiki
+Jay Jay any news on this one :hi5:  @Jay | C4
+
+
+[09/02/2022 2:38 PM] itsmetechjay
+It's currently being judged. 🙂
+
+{Reactions}
+thankyou 
+
+[09/02/2022 2:40 PM] dravee
+"Jay Jay Jay Jay 🎵 Jay-bird, jay-bird, Fly through my window" 🎶 https://youtu.be/tz6WRiNwujQ?t=60
+
+{Embed}
+amandiar
+https://www.youtube.com/watch?v=tz6WRiNwujQ&start=60
+Little Bird, Little Bird - Elizabeth Mitchell
+2018 update: I don't know why I've never addressed the fact that this has become a Futurama phenomenon. I just love the song, so I'm glad we are all enjoying it together!! 
+
+Xoxo Robin Marie
+
+
+-----
+ I've been wanting to share this song on my blog, but there was no YouTube of it! I considered compiling a bunch of bird photos, then thought it wou...
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/hqdefault-3D564.jpg
+
+{Reactions}
+😆 (3) 💜 (4) 
+
+[09/02/2022 3:48 PM] alextheentreprenerd
+Should be done with Judging over the weekend and triage early next week
+
+{Reactions}
+hi5 (3) thankyou (2) 
+
+[09/02/2022 4:46 PM] codingnamekiki
+:chefskiss:
+
+
+[09/08/2022 3:10 PM] alextheentreprenerd
+2 days left for Triage then prob 1 day for last last review
+
+
+[09/23/2022 2:35 AM] elku.cryptos
+https://github.com/code-423n4/code423n4.com/pull/4074/files
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/4074/files
+Add Axelar to Leaderboard by liveactionllama · Pull Request #4074 ·...
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/98446738-1A1F9
+
+
+[09/23/2022 5:51 PM] itsmetechjay
+🤑 🎉 Awards for **Axelar Network**:
+
+$11,259.63 USDC » @Chom 
+$7,836.02 USDC » @xiaoming90 
+$7,787.96 USDC » @__141345__ 
+$7,710.49 USDC » @Roman 
+$2,169.87 USDC » @Ruhum 
+$2,166.28 USDC » @Respx 
+$2,148.88 USDC » @0x52 
+$2,134.93 USDC » @cryptphi 
+$608.60 USDC » @thinklab 
+$529.69 USDC » @IllIllI 
+$361.50 USDC » @rbserver 
+$274.62 USDC » @JC
+$195.99 USDC » @Bnke 
+$195.99 USDC » @DefSec 
+$194.73 USDC » @Dravee 
+$121.93 USDC » @0x1f8b 
+$120.01 USDC » @fatherOfBlocks 
+$117.03 USDC » @Deivitto 
+$115.43 USDC » @ajtra 
+$110.89 USDC » @robee 
+$101.29 USDC » mics
+$96.59 USDC » @code-cipher 
+$92.62 USDC » @TomJ 
+$91.30 USDC » @horsefacts 
+$90.61 USDC » @Sm4rty 
+$89.05 USDC » @lucacez 
+$89.01 USDC » @c3phas 
+$88.39 USDC » @kyteg 
+$88.39 USDC » @Rolezn 
+$88.21 USDC » @simon135 
+$88.08 USDC » @0xNazgul 
+$88.05 USDC » @benbaessler 
+$88.03 USDC » @RedOneN 
+$88.02 USDC » @Rohan 
+$88.02 USDC » @Waze 
+$88.01 USDC » @apostle0x01 
+$88.01 USDC » @djxploit 
+$88.01 USDC » @gogo 
+$88.01 USDC » @Tofunmi 
+$88.00 USDC » @Noam Yakov 
+$88.00 USDC » @ReyAdmirado 
+$87.37 USDC » @bharg4v 
+$87.36 USDC » @Sloth 
+$87.35 USDC » @bulej93 
+$87.35 USDC » @CodingNameKiki 
+$87.35 USDC » @durianSausage 
+$87.35 USDC » @sashik_eth 
+$87.34 USDC » @8olidity 
+$87.34 USDC » @ElKu 
+$87.34 USDC » @Noah3o6 
+$60.77 USDC » @Bernd 
+$58.72 USDC » @hansfriese 
+$56.32 USDC » @cccz 
+$56.32 USDC » CertoraInc (@egjlmn1, @Ori Dabush, @ItayG, @shakedwinder, @RoiEvenHaim)
+$56.16 USDC » @100proof
+$56.15 USDC » @cryptonue 
+$56.13 USDC » 0xf15ers (@remora0, @twojoy)
+$56.13 USDC » @0xSmartContract 
+$56.13 USDC » @ashiq0x01 
+$56.13 USDC » @bardamu 
+$56.13 USDC » @codexploder 
+$56.13 USDC » @Ignacio 
+$56.13 USDC » @Twpony 
+$56.12 USDC » @ch13fd357r0y3r 
+$56.12 USDC » @Yiko 
+$36.49 USDC » @MiloTruck 
+$31.88 USDC » @0xsam 
+$31.88 USDC » @gerdusx 
+$31.88 USDC » @medikko 
+$31.88 USDC » @Tomio 
+$31.22 USDC » @0xOwen-GuardianAudits 
+$31.22 USDC » @a12jmx 
+$31.22 USDC » @Fitraldys 
+$31.22 USDC » @ak1 
+$31.22 USDC » @EricTee 
+
+🏁 Findings summary
+---------------------------
+Med risk findings: 11 total, 6 unique
+Gas optimization reports: 56
+QA reports: 65 
+
+Awards will be distributed on Polygon within the next 1-2 weeks. Congratulations! 💸 💸
+
+*Note: If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions. *
+
+{Reactions}
+🎉 (9) 🔥 (5) 💸 (4) C4Keycap (3) 
+
+[09/23/2022 5:53 PM] bnke0x0
+https://tenor.com/view/rich-cash-lots-of-money-all-the-moneys-cash-pile-gif-11801444
+
+{Embed}
+https://tenor.com/view/rich-cash-lots-of-money-all-the-moneys-cash-pile-gif-11801444
+Code4rena - ARCHIVE-Q3-2022 - ⚛axelar-network-jul29 [960912037016379452].txt_Files/rich-cash-79BF7.png
+
+{Reactions}
+😂 (13) 
+
+[09/23/2022 5:57 PM] codingnamekiki
+Do you remember me, we used to be best friends in high school? Friends share everything...💸
+
+{Reactions}
+😂 (5) 
+
+[09/23/2022 6:36 PM] bnke0x0
+I guess I have friends in high school around me but when you're paying them can they ever really be true friends? 🙃
+
+
+[09/23/2022 6:41 PM] codingnamekiki
+Fair point tbh.
+
+
+==============================================================
+Exported 76 message(s)
+==============================================================
